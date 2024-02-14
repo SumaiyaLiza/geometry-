@@ -34,7 +34,8 @@
                         </div>
                         <div>
                             <p class="text-xl items-start">Area: <span id="triangle-area"></span>
-                                <span>cm<sup>2</sup></span></p>
+                                <span>cm<sup>2</sup></span>
+                            </p>
                         </div>
                     </div>
                     <div class="card-actions justify-center mt-2">
@@ -58,7 +59,8 @@
                         </div>
                         <div>
                             <p class="text-xl items-start">Area: <span id="rectangle-area"></span>
-                                <span>cm<sup>2</sup></span></p>
+                                <span>cm<sup>2</sup></span>
+                            </p>
                         </div>
                     </div>
                     <div class="card-actions justify-center mt-2">
@@ -88,7 +90,7 @@
                -->
                 <!-- Parallelogram -->
                 <div class="card card-compact w-96 bg-slate-500 shadow-xl h-96">
-                    <figure><img class="w-52 mt-10" src="images/parallelogram.png" alt="Shoes" /></figure>
+                    <figure><img class="w-52 mt-14" src="images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Parallelogram</h2>
                         <p class="text-center text-xl">Area (A) = b * h</p>
@@ -102,14 +104,43 @@
                         </div>
                         <div>
                             <p class="text-xl items-start">Area: <span id="parallelogram-area"></span>
-                                <span>cm<sup>2</sup></span></p>
+                                <span>cm<sup>2</sup></span>
+                            </p>
                         </div>
                     </div>
                     <div class="card-actions justify-center mt-2">
                         <button onclick="calculateParallelogram()" class="btn btn-primary w-80">Calculate</button>
                     </div>
                 </div>
+
+                <!-- Rhombus -->
+                <div class="card card-compact w-96 bg-slate-500 shadow-xl h-96 mt-5">
+                    <figure><img class="w-52 mt-6" src="images/rhombus.png" alt="Rhombus" /></figure>
+                    <div class="flex flex-col justify-center items-center">
+                        <h2 class="text-center mt-3 text-2xl">Rhombus</h2>
+                        <p class="text-center text-xl">Area (A) = 0.5 * d1 * d2</p>
+                        <div class="items-center">
+                            <input id="rhombus-diagonal1" class="w-16 text-xl rounded-md mt-2" type="text"
+                                placeholder="d1">
+                            <span class="text-xl">cm</span>
+                            <input id="rhombus-diagonal2" class="w-16 text-xl rounded-md ml-5 mt-2" type="text"
+                                placeholder="d2">
+                            <span class="text-xl">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-xl items-start">Area: <span id="rhombus-area"></span>
+                                <span>cm<sup>2</sup></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-actions justify-center ">
+                        <button onclick="calculateRhombusArea()" class="btn btn-primary w-80">Calculate</button>
+                    </div>
+                </div>
+
             </div>
+
+
             <!-- Area Calculation Area -->
 
             <div class="w-80 h-96 border-2 border-gray-700 rounded-md">

@@ -60,6 +60,29 @@ function calculateParallelogram() {
   // Set the text content of the element to display the calculated area
   parallelogramArea.textContent = area.toFixed(2); // Round the area to 2 decimal places
 }
+function calculateRhombusArea() {
+  // Retrieve the first diagonal input element by its ID
+  const diagonal1Input = document.getElementById('rhombus-diagonal1');
+  // Retrieve the value entered in the first diagonal input field
+  const diagonal1InputValue = diagonal1Input.value;
+  // Parse the first diagonal value to a float
+  const diagonal1 = parseFloat(diagonal1InputValue);
+
+  // Retrieve the second diagonal input element by its ID
+  const diagonal2Input = document.getElementById('rhombus-diagonal2');
+  // Retrieve the value entered in the second diagonal input field
+  const diagonal2InputValue = diagonal2Input.value;
+  // Parse the second diagonal value to a float
+  const diagonal2 = parseFloat(diagonal2InputValue);
+
+  // Calculate the area of the rhombus
+  const area = 0.5 * diagonal1 * diagonal2;
+
+  // Retrieve the element where the area will be displayed
+  const rhombusArea = document.getElementById('rhombus-area');
+  // Set the text content of the element to display the calculated area
+  rhombusArea.textContent = area.toFixed(2); // Round the area to 2 decimal places
+}
 
 
 

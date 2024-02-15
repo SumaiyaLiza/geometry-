@@ -21,15 +21,17 @@
             <!-- shape container -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Triangle -->
-                <div class="card card-compact w-96 bg-slate-500 shadow-xl h-96">
+                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96">
                     <figure><img class="w-52 mt-3" src="images/triangle.png" alt="Shoes" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Triangle</h2>
                         <p class="text-center text-xl">Area (A) = 0.5*b*h</p>
                         <div class="items-center">
-                            <input id="base" class="w-16 text-xl rounded-md mt-2" type="text" placeholder="b">
+                            <input id="base" class="w-16 text-xl rounded-md mt-2 text-center" type="text"
+                                placeholder="b">
                             <span class="text-xl">cm</span>
-                            <input id="height" class="w-16 text-xl rounded-md ml-5 mt-2" type="text" placeholder="h">
+                            <input id="height" class="w-16 text-xl rounded-md ml-5 mt-2 text-center" type="text"
+                                placeholder="h">
                             <span class="text-xl">cm</span>
                         </div>
                         <div>
@@ -46,15 +48,17 @@
 
 
                 <!-- Rectangle -->
-                <div class="card card-compact w-96 bg-slate-500 shadow-xl h-96">
+                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96">
                     <figure><img class="w-52 mt-10" src="images/rectangle.png" alt="Shoes" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Rectangle</h2>
                         <p class="text-center text-xl">Area (A) = W*L</p>
                         <div class="items-center">
-                            <input id="width" class="w-16 text-xl rounded-md mt-2" type="text" placeholder="w">
+                            <input id="width" class="w-16 text-xl rounded-md mt-2 text-center" type="text"
+                                placeholder="w">
                             <span class="text-xl">cm</span>
-                            <input id="length" class="w-16 text-xl rounded-md ml-5 mt-2" type="text" placeholder="l">
+                            <input id="length" class="w-16 text-xl rounded-md ml-5 mt-2 text-center" type="text"
+                                placeholder="l">
                             <span class="text-xl">cm</span>
                         </div>
                         <div>
@@ -67,39 +71,19 @@
                         <button onclick="calculateRectangle()" class="btn btn-primary w-80">Calculate</button>
                     </div>
                 </div>
-                <!-- <div class="card card-compact w-96 bg-slate-500 shadow-xl h-96">
-                  <figure><img class="w-52 mt-10" src="images/parallelogram.png" alt="Shoes" /></figure>
-                  <div class="flex flex-col justify-center items-center">
-                      <h2 class="text-center mt-3 text-2xl">Parallelogram</h2>
-                      <p class="text-center text-xl">Area (A)=b*h</p>
-                      <div class="items-center">
-                          <input id="width" class="w-16 text-xl rounded-md mt-2" type="text" placeholder="w">
-                          <span class="text-xl">cm</span>
-                          <input id="height" class="w-16 text-xl rounded-md ml-5 mt-2" type="text" placeholder="h">
-                          <span class="text-xl">cm</span>
-                        </div>
-                        <div >
-                          <p class="text-xl items-start">Area: <span id="parallelogram-area"></span> <span>cm<sup>2</sup></span></p>
-                        </div>
-                      </div>
-                      <div class="card-actions justify-center mt-2">
-                          <button onclick="calculateParallelogram ()" class="btn btn-primary w-80">Calculate</button>
-                  </div>
-              </div>
-                
-               -->
+
                 <!-- Parallelogram -->
-                <div class="card card-compact w-96 bg-slate-500 shadow-xl h-96">
+                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96">
                     <figure><img class="w-52 mt-14" src="images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Parallelogram</h2>
                         <p class="text-center text-xl">Area (A) = b * h</p>
                         <div class="items-center">
-                            <input id="parallelogram-width" class="w-16 text-xl rounded-md mt-2" type="text"
+                            <input id="parallelogram-width" class="w-16 text-xl rounded-md mt-2 text-center" type="text"
                                 placeholder="b">
                             <span class="text-xl">cm</span>
-                            <input id="parallelogram-height" class="w-16 text-xl rounded-md ml-5 mt-2" type="text"
-                                placeholder="h">
+                            <input id="parallelogram-height" class="w-16 text-xl rounded-md ml-5 mt-2 text-center"
+                                type="text" placeholder="h">
                             <span class="text-xl">cm</span>
                         </div>
                         <div>
@@ -114,17 +98,17 @@
                 </div>
 
                 <!-- Rhombus -->
-                <div class="card card-compact w-96 bg-slate-500 shadow-xl h-96 mt-5">
+                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96 mt-5">
                     <figure><img class="w-52 mt-6" src="images/rhombus.png" alt="Rhombus" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Rhombus</h2>
                         <p class="text-center text-xl">Area (A) = 0.5 * d1 * d2</p>
                         <div class="items-center">
-                            <input id="rhombus-diagonal1" class="w-16 text-xl rounded-md mt-2" type="text"
+                            <input id="rhombus-diagonal1" class="w-16 text-xl rounded-md mt-2 text-center" type="text"
                                 placeholder="d1">
                             <span class="text-xl">cm</span>
-                            <input id="rhombus-diagonal2" class="w-16 text-xl rounded-md ml-5 mt-2" type="text"
-                                placeholder="d2">
+                            <input id="rhombus-diagonal2" class="w-16 text-xl rounded-md ml-5 mt-2 text-center"
+                                type="text" placeholder="d2">
                             <span class="text-xl">cm</span>
                         </div>
                         <div>
@@ -137,6 +121,57 @@
                         <button onclick="calculateRhombusArea()" class="btn btn-primary w-80">Calculate</button>
                     </div>
                 </div>
+
+
+                <!-- pentagon -->
+
+                <div class="card card-compact w-80 bg-slate-100 shadow-xl h-96 mt-5">
+                    <figure><img class="w-52 mt-6" src="images/pentagon.png" alt="Pentagon" /></figure>
+                    <div class="flex flex-col justify-center items-center">
+                        <h2 class="text-center mt-3 text-2xl">Pentagon</h2>
+                        <p class="text-center text-xl">Area (A) = (5/4) * a<sup>2</sup> * (1 / tan(&pi;/5))</p>
+                        <div class="items-center">
+                            <input id="pentagon-side-length" class="w-16 text-xl rounded-md mt-2 text-center"
+                                type="text" placeholder="a">
+                            <span class="text-xl">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-xl items-start">Area: <span id="pentagon-area"></span>
+                                <span>cm<sup>2</sup></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-actions justify-center ">
+                        <button onclick="pentagonArea()" class="btn btn-primary w-80 mb-4">Calculate</button>
+                    </div>
+                </div>
+                
+
+                <!-- Ellipse -->
+                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96 mt-5">
+                    <figure><img class="w-52 mt-6" src="images/ellipse.png" alt="Ellipse" /></figure>
+                    <div class="flex flex-col justify-center items-center">
+                        <h2 class="text-center mt-3 text-2xl">Ellipse</h2>
+                        <p class="text-center text-xl mt-2">Area (A) = π * a * b</p>
+                        <div class="items-center m-1">
+                            <input id="semi-major-axis" class="w-16 text-xl rounded-md mt-2 text-center inline-block" type="text" placeholder="a">
+                            <span class="text-xl ml-2">cm</span>
+                            <input id="semi-minor-axis" class="w-16 text-xl rounded-md mt-2 text-center inline-block ml-2" type="text" placeholder="b">
+                            <span class="text-xl ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-xl items-start mt-3">Area: <span id="ellipse-area"></span>
+                                <span>cm<sup>2</sup></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-actions justify-center ">
+                        <button onclick="calculateEllipseArea()" class="btn btn-primary w-80">Calculate</button>
+                    </div>
+                </div>
+                
+                
+                
 
             </div>
 

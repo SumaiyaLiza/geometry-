@@ -85,5 +85,47 @@ function calculateRhombusArea() {
 }
 
 
+function pentagonArea() {
+  // Retrieve the side length input element by its ID
+  const sideLengthInput = document.getElementById('pentagon-side-length');
+  // Retrieve the value entered in the input field
+  const sideLengthInputValue = sideLengthInput.value;
+  // Parse the value to a float
+  const sideLength = parseFloat(sideLengthInputValue);
+
+  // Calculate the area of the pentagon
+  const area = (5 / 4) * sideLength * sideLength * (1 / Math.tan(Math.PI / 5));
+
+  // Retrieve the element where the area will be displayed
+  const pentagonAreaElement = document.getElementById('pentagon-area');
+  // Set the text content of the element to display the calculated area
+  pentagonAreaElement.textContent = area.toFixed(2); // Round the area to 2 decimal places
+}
+
+
+function calculateEllipseArea() {
+  // Retrieve the semi-major axis input element by its ID
+  const semiMajorAxisInput = document.getElementById('semi-major-axis');
+  // Retrieve the value entered in the input field
+  const semiMajorAxisInputValue = semiMajorAxisInput.value;
+  // Parse the value to a float
+  const semiMajorAxis = parseFloat(semiMajorAxisInputValue);
+
+  // Retrieve the semi-minor axis input element by its ID
+  const semiMinorAxisInput = document.getElementById('semi-minor-axis');
+  // Retrieve the value entered in the input field
+  const semiMinorAxisInputValue = semiMinorAxisInput.value;
+  // Parse the value to a float
+  const semiMinorAxis = parseFloat(semiMinorAxisInputValue);
+
+  // Calculate the area of the ellipse
+  const area = Math.PI * semiMajorAxis * semiMinorAxis;
+
+  // Retrieve the element where the area will be displayed
+  const ellipseAreaElement = document.getElementById('ellipse-area');
+  // Set the text content of the element to display the calculated area
+  ellipseAreaElement.textContent = area.toFixed(2); // Round the area to 2 decimal places
+}
+
 
 

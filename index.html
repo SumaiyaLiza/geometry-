@@ -7,16 +7,13 @@
     <title>Geometry</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
-
 </head>
 
-<body class="m-8 gap-10">
+<body class="lg:m-8">
     <header>
-
         <!-- Nav Bar Section -->
         <nav>
-            <div class="mb-6">
+            <div class="m-2 lg:mb-6 ">
                 <div class="navbar bg-base-300 rounded-box bg-blue-100">
                     <div class="flex-1 px-2 lg:flex-none">
                         <div class="flex-1">
@@ -32,25 +29,25 @@
                 </div>
             </div>
         </nav>
-
+        
     </header>
-    <main>
+    <main class="container mx-auto px-4">
         <!-- main content container -->
         <div class="flex flex-col md:flex-row">
             <!-- shape container -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Triangle -->
-                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96">
-                    <figure><img class="w-52 mt-3" src="images/triangle.png" alt="Shoes" /></figure>
+                <div class="card card-compact w-full md:w-96 bg-slate-100 shadow-xl h-96">
+                    <figure>
+                        <img class="w-52 mt-3" src="images/triangle.png" alt="Triangle" />
+                    </figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Triangle</h2>
                         <p class="text-center text-xl">Area (A) = 0.5*b*h</p>
                         <div class="items-center">
-                            <input id="base" class="w-16 text-xl rounded-md mt-2 text-center" type="text"
-                                placeholder="b">
+                            <input id="base" class="w-16 text-xl rounded-md mt-2 text-center" type="text" placeholder="b">
                             <span class="text-xl">cm</span>
-                            <input id="height" class="w-16 text-xl rounded-md ml-5 mt-2 text-center" type="text"
-                                placeholder="h">
+                            <input id="height" class="w-16 text-xl rounded-md ml-5 mt-2 text-center" type="text" placeholder="h">
                             <span class="text-xl">cm</span>
                         </div>
                         <div>
@@ -60,14 +57,13 @@
                         </div>
                     </div>
                     <div class="card-actions justify-center mt-2">
-                        <button onclick="calculateTriangle()" class="btn btn-primary w-80">Calculate</button>
-
+                        <button onclick="calculateTriangle()" class="btn btn-primary w-64 lg:w-80">Calculate</button>
                     </div>
                 </div>
-
+            
 
                 <!-- Rectangle -->
-                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96">
+                <div class="card card-compact w-full md:w-96 bg-slate-100 shadow-xl h-96">
                     <figure><img class="w-52 mt-10" src="images/rectangle.png" alt="Shoes" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Rectangle</h2>
@@ -87,12 +83,12 @@
                         </div>
                     </div>
                     <div class="card-actions justify-center mt-2">
-                        <button onclick="calculateRectangle()" class="btn btn-primary w-80">Calculate</button>
+                        <button onclick="calculateRectangle()" class="btn btn-primary w-64 lg:w-80">Calculate</button>
                     </div>
                 </div>
 
                 <!-- Parallelogram -->
-                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96">
+                <div class="card card-compact w-full md:w-96 bg-slate-100 shadow-xl h-96">
                     <figure><img class="w-52 mt-14" src="images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Parallelogram</h2>
@@ -112,12 +108,12 @@
                         </div>
                     </div>
                     <div class="card-actions justify-center mt-2">
-                        <button onclick="calculateParallelogram()" class="btn btn-primary w-80">Calculate</button>
+                        <button onclick="calculateParallelogram()" class="btn btn-primary w-64 lg:w-80">Calculate</button>
                     </div>
                 </div>
 
                 <!-- Rhombus -->
-                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96 mt-5">
+                <div class="card card-compact w-full md:w-96 bg-slate-100 shadow-xl h-96">
                     <figure><img class="w-52 mt-6" src="images/rhombus.png" alt="Rhombus" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Rhombus</h2>
@@ -137,14 +133,12 @@
                         </div>
                     </div>
                     <div class="card-actions justify-center ">
-                        <button onclick="calculateRhombusArea()" class="btn btn-primary w-80">Calculate</button>
+                        <button onclick="calculateRhombusArea()" class="btn btn-primary w-64 lg:w-80">Calculate</button>
                     </div>
                 </div>
 
-
-                <!-- pentagon -->
-
-                <div class="card card-compact w-80 bg-slate-100 shadow-xl h-96 mt-5">
+                <!-- Pentagon -->
+                <div class="card card-compact w-full md:w-96 bg-slate-100 shadow-xl h-96">
                     <figure><img class="w-52 mt-6" src="images/pentagon.png" alt="Pentagon" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Pentagon</h2>
@@ -161,13 +155,12 @@
                         </div>
                     </div>
                     <div class="card-actions justify-center ">
-                        <button onclick="pentagonArea()" class="btn btn-primary w-80 mb-4">Calculate</button>
+                        <button onclick="pentagonArea()" class="btn btn-primary w-64 lg:w-80 mb-4">Calculate</button>
                     </div>
                 </div>
 
-
                 <!-- Ellipse -->
-                <div class="card card-compact w-96 bg-slate-100 shadow-xl h-96 mt-5">
+                <div class="card card-compact w-full md:w-96 bg-slate-100 shadow-xl h-96">
                     <figure><img class="w-52 mt-6" src="images/ellipse.png" alt="Ellipse" /></figure>
                     <div class="flex flex-col justify-center items-center">
                         <h2 class="text-center mt-3 text-2xl">Ellipse</h2>
@@ -188,20 +181,14 @@
                         </div>
                     </div>
                     <div class="card-actions justify-center ">
-                        <button onclick="calculateEllipseArea()" class="btn btn-primary w-80">Calculate</button>
+                        <button onclick="calculateEllipseArea()" class="btn btn-primary w-64 lg:w-80">Calculate</button>
                     </div>
                 </div>
-
-
-
-
             </div>
 
-
             <!-- Area Calculation Area -->
-
-            <div class="w-80 h-96 border-2 border-gray-700 rounded-md">
-                <h3 class="text-4xl text-center "> Area Calculation</h3>
+            <div class="w-full md:w-80 h-auto border-2 border-gray-700 rounded-md mt-4 md:mt-0">
+                <h3 class="text-4xl text-center py-8"> Area Calculation</h3>
             </div>
         </div>
     </main>

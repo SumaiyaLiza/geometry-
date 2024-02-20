@@ -38,94 +38,118 @@ function calculateRectangle () {
   
 }
 function calculateParallelogram() {
-  // Retrieve the width input element by its ID
   const widthInput = document.getElementById('parallelogram-width');
-  // Retrieve the value entered in the width input field
   const widthInputValue = widthInput.value;
-  // Parse the width value to a float
   const width = parseFloat(widthInputValue);
 
-  // Retrieve the height input element by its ID
   const heightInput = document.getElementById('parallelogram-height');
-  // Retrieve the value entered in the height input field
   const heightInputValue = heightInput.value;
-  // Parse the height value to a float
   const height = parseFloat(heightInputValue);
 
-  // Calculate the area of the parallelogram
   const area = width * height;
-
-  // Retrieve the element where the area will be displayed
   const parallelogramArea = document.getElementById('parallelogram-area');
-  // Set the text content of the element to display the calculated area
-  parallelogramArea.textContent = area.toFixed(2); // Round the area to 2 decimal places
+  parallelogramArea.textContent = area.toFixed(2); 
 }
 function calculateRhombusArea() {
-  // Retrieve the first diagonal input element by its ID
   const diagonal1Input = document.getElementById('rhombus-diagonal1');
-  // Retrieve the value entered in the first diagonal input field
   const diagonal1InputValue = diagonal1Input.value;
-  // Parse the first diagonal value to a float
   const diagonal1 = parseFloat(diagonal1InputValue);
-
-  // Retrieve the second diagonal input element by its ID
   const diagonal2Input = document.getElementById('rhombus-diagonal2');
-  // Retrieve the value entered in the second diagonal input field
   const diagonal2InputValue = diagonal2Input.value;
-  // Parse the second diagonal value to a float
   const diagonal2 = parseFloat(diagonal2InputValue);
-
-  // Calculate the area of the rhombus
   const area = 0.5 * diagonal1 * diagonal2;
-
-  // Retrieve the element where the area will be displayed
   const rhombusArea = document.getElementById('rhombus-area');
-  // Set the text content of the element to display the calculated area
-  rhombusArea.textContent = area.toFixed(2); // Round the area to 2 decimal places
+  rhombusArea.textContent = area.toFixed(2);
 }
 
 
 function pentagonArea() {
-  // Retrieve the side length input element by its ID
   const sideLengthInput = document.getElementById('pentagon-side-length');
-  // Retrieve the value entered in the input field
   const sideLengthInputValue = sideLengthInput.value;
-  // Parse the value to a float
   const sideLength = parseFloat(sideLengthInputValue);
-
-  // Calculate the area of the pentagon
   const area = (5 / 4) * sideLength * sideLength * (1 / Math.tan(Math.PI / 5));
-
-  // Retrieve the element where the area will be displayed
   const pentagonAreaElement = document.getElementById('pentagon-area');
-  // Set the text content of the element to display the calculated area
-  pentagonAreaElement.textContent = area.toFixed(2); // Round the area to 2 decimal places
+  pentagonAreaElement.textContent = area.toFixed(2);
 }
 
 
 function calculateEllipseArea() {
-  // Retrieve the semi-major axis input element by its ID
   const semiMajorAxisInput = document.getElementById('semi-major-axis');
-  // Retrieve the value entered in the input field
   const semiMajorAxisInputValue = semiMajorAxisInput.value;
-  // Parse the value to a float
   const semiMajorAxis = parseFloat(semiMajorAxisInputValue);
 
-  // Retrieve the semi-minor axis input element by its ID
   const semiMinorAxisInput = document.getElementById('semi-minor-axis');
-  // Retrieve the value entered in the input field
   const semiMinorAxisInputValue = semiMinorAxisInput.value;
-  // Parse the value to a float
   const semiMinorAxis = parseFloat(semiMinorAxisInputValue);
-
-  // Calculate the area of the ellipse
   const area = Math.PI * semiMajorAxis * semiMinorAxis;
-
-  // Retrieve the element where the area will be displayed
   const ellipseAreaElement = document.getElementById('ellipse-area');
-  // Set the text content of the element to display the calculated area
-  ellipseAreaElement.textContent = area.toFixed(2); // Round the area to 2 decimal places
+  ellipseAreaElement.textContent = area.toFixed(2);
+}
+
+
+//  function for Area calculation
+
+function appendAreaResult(shape,area) {
+  const areaCalculationDisplay = document.getElementById('area-calculation');
+  const resultElement = document.createElement('p');
+  resultElement.innerText = `The ${shape} Area is ${area.toFixed(2)} cm²`;
+  resultElement.classList.add('result-text')
+  areaCalculationDisplay.appendChild(resultElement);
+}
+
+function AreaCalculationTriangle() {
+  calculateTriangle();
+  const areaDisplay = document.getElementById('triangle-area');
+  const area = parseFloat(areaDisplay.innerText);
+  appendAreaResult('Triangle', area);
+}
+
+function AreaCalculationRectangle() {
+  calculateRectangle();
+  const areaDisplay = document.getElementById('rectangle-area');
+  const area = parseFloat(areaDisplay.innerText);
+  appendAreaResult('Rectangle', area);
+}
+
+function AreaCalculationEllipse (){
+
+  calculateEllipseArea (); 
+  const areaDisplay = document.getElementById('ellipse-area');
+  const area = parseFloat(areaDisplay.innerText);
+  appendAreaResult('Ellipse', area);
+}
+
+function AreaCalculationParallelogram () {
+
+  calculateParallelogram(); 
+
+  const areaDisplay = document.getElementById('parallelogram-area'); 
+  const area = parseFloat (areaDisplay.innerText); 
+  appendAreaResult ('Parallelogram', area); 
+
 }
 
 
 
+function  AreaCalculationRhombus () {
+
+  calculateRhombusArea() ;
+  const areaDisplay = document.getElementById('rhombus-area'); 
+  const area = parseFloat (areaDisplay.innerText); 
+  appendAreaResult ('Rhombus', area); 
+}
+
+function AreaCalculationPentagon () {
+
+  pentagonArea();
+  const areaDisplay = document.getElementById('pentagon-area'); 
+  const area = parseFloat (areaDisplay.innerText); 
+  appendAreaResult ('Pentagon', area);
+
+}
+function AreaCalculationEllipse (){
+  calculateEllipseArea();
+  const areaDisplay = document.getElementById('ellipse-area'); 
+  const area = parseFloat (areaDisplay.innerText); 
+  appendAreaResult ('Ellipse', area);
+}
